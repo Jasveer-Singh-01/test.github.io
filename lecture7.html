@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>lecture 2</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<script>  
+    function validateform(){  
+    var name=document.myform.name.value;  
+    var password=document.myform.password.value;  
+      
+    if (name==null || name==""){  
+      alert("Name can't be blank");  
+      return false;  
+    }else if(password.length<6){  
+      alert("Password must be at least 6 characters long.");  
+      return false;  
+      }  
+    }  
+
+    function matchpass(){  
+var firstpassword=document.f1.password.value;  
+var secondpassword=document.f1.password2.value;  
+  
+if(firstpassword==secondpassword){  
+return true;  
+}  
+else{  
+alert("password must be same!");  
+return false;  
+}  
+    </script>  
+<body>
+          
+    <div class="form1">
+        <h1>Form</h1>
+        <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="name" placeholder="Enter your first name"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" placeholder="Enter your last name"><br><br>
+        <label for="Password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Choose your password"><br><br>
+        <label for="lname"><b>Select the Course</b></label><br>
+        <label for="lname">MCA</label>
+        <input type="checkbox" required id="lname" name="lname">
+        <label for="lname">B.Tech</label>
+        <input type="checkbox" required id="lname" name="lname">
+        <label for="lname">M.Sc. (IT)</label>
+        <input type="checkbox" required() id="lname" name="lname"><br><br>
+        <label for="fname">Marksheets:</label><br>
+        <input type="radio">Available</input>
+        <input type="radio">Not Available</input><br><br>
+        <button>Upload Marksheets</button><br><br>
+        <input onclick="{()=>matchpass()}" type="submit" value="Submit">
+        </form><br><br>
+        <div><center> <button><a href="actframe.html">HOME</a></button></center>
+            </div>
+    </div>
+
+ 
+       
+        
+    </body>
+</html>
